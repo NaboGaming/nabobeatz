@@ -28,12 +28,7 @@ content="bootstrap 5, mobile template, wallet, crypto, currency, about, blog, co
 </head>
 
 <body>
-<!-- ===================================
-START LODAER PAGE
-==================================== -->
-<section class="loader-page" id="loaderPage">
-<div class="spinner_flash"></div>
-</section>
+  <div id="loading-line"></div>
 <!-- START WRAPPER -->
 <div id="wrapper">
 <!-- START CONTENT -->
@@ -49,13 +44,13 @@ START THE HEADER
 </a>
 <div class="un-block-right">
 <div class="un-notification">
-<a href="page-activity.html" aria-label="activity">
+<a href="notification.html" aria-label="notification">
 <i class="ri-notification-line"></i>
 </a>
 <span class="bull-activity"></span>
 </div>
 <div class="un-user-profile">
-<a href="page-my-profile.html" aria-label="profile">
+<a href="version.html" aria-label="profile">
 <picture>
 <source srcset="images/avatar/11.webp" type="image/webp">
 <img class="img-avatar" src="images/avatar/11.jpg" alt="">
@@ -110,7 +105,7 @@ START THE NFT SWIPER
 </div>
 </div>
 </div>
-<a href="page-collectibles-details.html" class="body-card py-0">
+<a href="#" class="body-card py-0">
 <div class="cover-nft">
 <picture>
 <source srcset="pubgmain.jpg" type="image/webp">
@@ -387,7 +382,7 @@ START THE BEST SELLER
 <p>Ungana Na Mitaa Ya Games Unazocheza</p>
 </div>
 <div class="un-block-right">
-<a href="mtaapubg1.html"><i class="ri-arrow-drop-right-line" style="color:black;font-size: 30px;"></i></a> 
+<a href="mitaa.html"><i class="ri-arrow-drop-right-line" style="color:black;font-size: 30px;"></i></a> 
 </div>
 </div>
 
@@ -914,7 +909,7 @@ START THE BOTTOM NAVIGATION
 </a>
 </div>
 <div class="item_link">
-<a href="page-search-random.html" class="btn btn_navLink" aria-label="btnNavigation">
+<a href="gameon.html" class="btn btn_navLink" aria-label="btnNavigation">
 <div class="icon_current">
 <i class="ri-gamepad-line"></i>
 </div>
@@ -932,22 +927,12 @@ aria-label="btnNavigation">
 </span>
 </div>
 <div class="item_link">
-<a href="page-favourit-random.html" class="btn btn_navLink" aria-label="btnNavigation">
-<div class="icon_current">
-<i class="ri-heart-3-line"></i>
-</div>
-<div class="icon_active">
-<i class="ri-heart-3-line"></i>
-</div>
-</a>
-</div>
-<div class="item_link">
 <a href="page-account.html" class="btn btn_navLink" aria-label="btnNavigation">
 <div class="icon_current">
-<i class="ri-user-4-line"></i>
+<i class="bi bi-person"></i>
 </div>
 <div class="icon_active">
-<i class="ri-user-4-line"></i>
+<i class="bi bi-person"></i>
 </div>
 </a>
 </div>
@@ -989,7 +974,7 @@ Anza Sasa
 <!-- ===================================
 START THE MODAL ADD ETH
 ==================================== -->
-<div class="modal transition-bottom screenFull defaultModal mdlladd__rate fade" id="jisajili" tabindex="-1"
+<div class="modal sidebarMenu -left fade" id="jisajili" tabindex="-1"
 aria-labelledby="exampleModalLabel" aria-hidden="true">
 <div class="modal-dialog">
 <div class="modal-content">
@@ -1001,9 +986,8 @@ aria-labelledby="exampleModalLabel" aria-hidden="true">
 </div>
 <div class="modal-body">
 <div class="content-upload-item">
-<p class="text-center">
-Tafadhari Jaza Taarifa Zifuatazo Kwa Usahihi,<br> Hapo Utakuwa Umejisajili Kikamilifu
-</p>
+<p class="text-left">
+Tafadhari Jaza Taarifa Zifuatazo Kwa Usahihi,</p>
 <div class="padding-20 form-edit-profile bg-white color-black">
     <div class="bk-social-networks">
     <div class="form-group with_icon">
@@ -1168,7 +1152,7 @@ Create
 </a>
 </li>    
 <li class="nav-item">
-<a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#mdllShareCollectibles">
+<a class="nav-link" href="version.html" data-bs-toggle="modal" data-bs-target="#mdllShareCollectibles">
 <div class="icon_current">
 <i class="ri-file-info-line"></i>
 </div>
@@ -1529,7 +1513,16 @@ aria-labelledby="pills-Bids-tab">
     // Call the function to set multiple countdowns and days left displays
     setMultipleCountdowns(datesAndIds);
     </script>
-    
+    <script>
+window.addEventListener("load", function () {
+  const loadingLine = document.getElementById("loading-line");
+  loadingLine.style.width = "100%";
+  setTimeout(function () {
+    loadingLine.style.opacity = "0";
+  }, 500); // Hiding the loading line after a short delay for a smoother experience
+});
+
+      </script>  
 </body>
 
 </html>
